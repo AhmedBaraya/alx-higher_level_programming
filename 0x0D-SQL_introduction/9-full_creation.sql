@@ -1,5 +1,4 @@
 -- Connect to MySQL server and create the table if it doesn't exist
-mysql -u your_username -p your_password -D hbtn_0c_0 << EOF
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
