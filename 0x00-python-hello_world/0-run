@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# Check if PYFILE environment variable is set
+# Check if the PYFILE environment variable is set
 if [ -z "$PYFILE" ]; then
-    echo "PYFILE environment variable is not set."
-    exit 1
+  echo "Error: Please set the PYFILE environment variable with the Python script name."
+  exit 1
 fi
 
-# Check if the file exists
-if [ ! -f "$PYFILE" ]; then
-    echo "File $PYFILE does not exist."
-    exit 1
-fi
+# Construct the full path to the Python script (optional, modify if needed)
+python_path="."  # Assuming the script is in the current directory
+script_name="$PYFILE"
+full_path="$python_path/$script_name"
 
-# Run the Python script
-python3 "$PYFILE"
+# Run the Python script using the full path
+python "$full_path"
+
 
