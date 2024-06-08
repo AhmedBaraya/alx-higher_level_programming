@@ -1,2 +1,1 @@
-Python - Hello,World
-f
+0x00. Python - Hello, World
